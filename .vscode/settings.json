@@ -6,6 +6,13 @@
         "synch.h": "c",
         "vaddr.h": "c",
         "intrinsic.h": "c",
-        "interrupt.h": "c"
+        "interrupt.h": "c",
+        "thread.h": "c",
+        "stdio.h": "c",
+        "timer.h": "c",
+        "file.h": "c",
+        "process.h": "c",
+        "syscall.h": "c",
+        "debug.h": "c"
     }
 }

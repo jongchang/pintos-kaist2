@@ -1,0 +1,36 @@
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0138B4A0+012CB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..Kernel command line: -q -f put bad-read2 run bad-read2
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  157,081,600 loops/s.
+hd0: unexpected interrupt
+hd0:0: detected 337 sector (168 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 20,160 sector (9 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1: unexpected interrupt
+hd1:0: detected 119 sector (59 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'bad-read2' into the file system...
+Executing 'bad-read2':
+(bad-read2) begin
+Page fault at 0x8004000000: rights violation error reading page in user context.
+bad-read2: dying due to interrupt 0x0e (#PF Page-Fault Exception).
+Interrupt 0x0e (#PF Page-Fault Exception) at rip=400012
+ cr2=0000008004000000 error=               5
+rax 0000008004000000 rbx 0000000000000000 rcx 00000000004062a0 rdx 00000000004063a0
+rsp 000000004747ff90 rbp 000000004747ff90 rsi 00000000004062ae rdi 000000000040639f
+rip 0000000000400012 r8 0000000000000000  r9 0000000000000000 r10 0000000000000000
+r11 0000000000000206 r12 0000000000000000 r13 0000000000000000 r14 0000000000000000
+r15 0000000000000000 rflags 00000212
+es: 001b ds: 001b cs: 0023 ss: 001b
+bad-read2: exit(-2)
+TIMEOUT

@@ -1,0 +1,37 @@
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0138B4A0+012CB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk...
+Kernel command line: -q -f put bad-write run bad-write
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  157,081,600 loops/s.
+hd0: unexpected interrupt
+hd0:0: detected 337 sector (168 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 20,160 sector (9 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1: unexpected interrupt
+hd1:0: detected 118 sector (59 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'bad-write' into the file system...
+Executing 'bad-write':
+(bad-write) begin
+Page fault at 0: not present error writing page in user context.
+bad-write: dying due to interrupt 0x0e (#PF Page-Fault Exception).
+Interrupt 0x0e (#PF Page-Fault Exception) at rip=40000d
+ cr2=0000000000000000 error=               6
+rax 0000000000000000 rbx 0000000000000000 rcx 0000000000406240 rdx 0000000000406340
+rsp 000000004747ff90 rbp 000000004747ff90 rsi 000000000040624e rdi 000000000040633f
+rip 000000000040000d r8 0000000000000000  r9 0000000000000000 r10 0000000000000000
+r11 0000000000000206 r12 0000000000000000 r13 0000000000000000 r14 0000000000000000
+r15 0000000000000000 rflags 00000212
+es: 001b ds: 001b cs: 0023 ss: 001b
+bad-write: exit(-2)
+TIMEOUT

@@ -1,0 +1,69 @@
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0138B4A0+012CB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..Kernel command line: -q -f put syn-write put child-syn-wrt run syn-write
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  209,510,400 loops/s.
+hd0: unexpected interrupt
+hd0:0: detected 337 sector (168 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 20,160 sector (9 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1: unexpected interrupt
+hd1:0: detected 259 sector (129 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'syn-write' into the file system...
+Putting 'child-syn-wrt' into the file system...
+Executing 'syn-write':
+(syn-write) begin
+(syn-write) create "stuff"
+(syn-write) exec child 1 of 10: "child-syn-wrt 0"
+(syn-write) exec child 2 of 10: "child-syn-wrt 1"
+(syn-write) exec child 3 of 10: "child-syn-wrt 2"
+(syn-write) exec child 4 of 10: "child-syn-wrt 3"
+(syn-write) exec child 5 of 10: "child-syn-wrt 4"
+(syn-write) exec child 6 of 10: "child-syn-wrt 5"
+(syn-write) exec child 7 of 10: "child-syn-wrt 6"
+(syn-write) exec child 8 of 10: "child-syn-wrt 7"
+Page fault at 0x18: not present error writing page in kernel context.
+Interrupt 0x0e (#PF Page-Fault Exception) at rip=8004208233
+ cr2=0000000000000018 error=               2
+rax 0000000000000000 rbx 000000004747ff64 rcx 0000000000000000 rdx 000000000000001f
+rsp 000000800424cca0 rbp 000000800424ccb0 rsi 000000800424c050 rdi 000000800426a040
+rip 0000008004208233 r8 00000080042081a7  r9 0000000000000000 r10 0000000000000000
+r11 0000000000000212 r12 000000800421f0df r13 0000000000000000 r14 0000000000000000
+r15 0000000000000000 rflags 00000202
+es: 001b ds: 001b cs: 0008 ss: 0010
+Kernel PANIC at ../../userprog/exception.c:97 in kill(): Kernel bug - unexpected interrupt in kernel
+Call stack: 0x8004219578 0x800421ee00 0x800421ef89 0x800420937a 0x80042097d2 0x800420ac57 0x800421fe46 0x800421de97 0x800421d978 0x800421f277 0x800421f124 0x800421effePage fault at 0x4747fe80: not present error reading page in kernel context.
+Interrupt 0x0e (#PF Page-Fault Exception) at rip=80042163d4
+ cr2=000000004747fe80 error=               0
+rax 000000004747fe80 rbx 000000004747ff64 rcx 00000080040b8000 rdx 00000000000003d4
+rsp 000000800424caa0 rbp 000000800424cab0 rsi 000000000000870f rdi 0000000000000000
+rip 00000080042163d4 r8 000000800424c9b8  r9 000000800421cee5 r10 0000000000000000
+r11 0000000000000212 r12 000000800421f0df r13 0000000000000000 r14 0000000000000000
+r15 0000000000000000 rflags 00000002
+es: 0010 ds: 0010 Page fault at 0x18: not present error writing page in kernel context.
+Interrupt 0x0e (#PF Page-Fault Exception) at rip=8004208233
+ cr2=0000000000000018 error=               2
+rax 0000000000000000 rbx 000000004747ff80 rcx 000000800424c050 rdx 000000000000001f
+rsp 000000800426eca0 rbp 000000800426ecb0 rsi 000000800426e050 rdi 000000800426a040
+rip 0000008004208233 r8 000000800420b4e3  r9 0000000000000000 r10 0000000000000000
+r11 0000000000000212 r12 000000800421f0df r13 0000000000000000 r14 0000000000000000
+r15 0000000000000000 rflags 00000202
+es: 001b ds: 001b cs: 0008 ss: 0010
+Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().
+Timer: 93 ticks
+Thread: 53 idle ticks, 28 kernel ticks, 12 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 144 reads, 578 writes
+hd1:0: 259 reads, 0 writes
+Console: 3390 characters output
+Key

@@ -51,6 +51,7 @@ test_priority_fifo (void)
   lock_init (&lock);
 
   thread_set_priority (PRI_DEFAULT + 2);
+
   for (i = 0; i < THREAD_CNT; i++) 
     {
       char name[16];
